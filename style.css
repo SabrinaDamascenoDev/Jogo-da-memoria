@@ -1,0 +1,137 @@
+ @import url('http://fonts.cdnfonts.com/css/homer-simpson-revised');
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-image: url(img/fundoo.jpeg);
+	background-size: cover;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #77898d;
+	color: white;
+	font-family: 'Homer Simpson Revised', sans-serif;
+	text-align: center;
+}
+
+#container{
+	display: grid;
+	grid-template-columns: repeat(5,10rem);
+	grid-template-rows: repeat(4,10rem);
+	grid-gap: 0.3rem;
+	perspective: 1000px;
+	position: relative;
+	margin: 40px;
+	
+
+
+	}
+
+.card{
+	position: relative;
+	transform-style: preserve-3d;
+	transition: all  ;
+	background-size: cover;
+	background-position: center;
+	background-size: 95px 145px;
+
+	
+	
+
+}
+
+.face{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border-radius: 1px;
+	transition: all 1s;
+	backface-visibility: hidden;
+	background-size: cover;
+	background-position: center;
+}
+
+.back{
+	background: url("img/versoo.png");
+	background-size: cover;
+}
+
+.back.flipped{
+	transform: rotateY(180deg);
+	
+
+}
+
+.front{
+	
+	transform: rotateY(-180deg);
+	background-size: cover;
+	background-position: center;
+	background-size: cover !important;
+}
+
+.front.flipped{
+	transform: rotateY(0deg);
+	background-size: cover;
+	background-position: center;
+}
+
+.card:hover{
+	box-shadow: 0 0 15px black;
+	border-radius: 30px;
+}
+img{
+	background-size: cover;
+}
+.back, .front{
+	width: 100%;
+	height: 100%;
+	border-radius: 30px;
+	position: absolute;
+	pointer-events: none;
+}
+#modal{
+	position: absolute;
+	top: 0px;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 656px;
+	width: 818px;
+	margin-top: 128px;
+	z-index: -2;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+#imgmodal{
+	height: 600px;
+	width: 600px;
+	margin-top: 10px;
+
+	
+}
+
+.flipped.pontos{
+	box-shadow: 0 0 20px #0f0;
+}
+
+#pontosnum{
+	text-align: center;
+
+	color: white;
+	font-family: 'Homer Simpson Revised', sans-serif;
+	
+}
+
+#tentativas{
+	text-align: center;
+	
+	
+	font-family: 'Homer Simpson Revised', sans-serif;
+	margin: auto;
+}
+h1, h2, h3{
+	font-size: 27px;
+}
